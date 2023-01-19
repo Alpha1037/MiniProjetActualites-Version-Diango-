@@ -1,0 +1,16 @@
+{%extends 'gestArticles/base.html' %}
+{%block content1 %}
+{% for category in categories%}
+<a href={% url 'categories-details' category.id %}>{{ category.label }}</a>&nbsp;&nbsp;&nbsp;
+{% endfor %}
+{% endblock %}
+{%block content3 %}
+{% for article in articles%}
+    <div class="card">
+        <h2>{{ article.title }}</h2>
+        <br>
+        <p>{{ article.description }}</p>
+        <br>
+    </div>
+{% endfor %}
+{% endblock %}

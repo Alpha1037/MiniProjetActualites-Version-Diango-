@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>SenActu</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="{% static 'gestArticles/style.css' %}">
+    </head>
+    <body>
+        <div class="header">
+            <div class = "titre">
+                <span>Sen</span><span id="orange">ACTU</span>
+            </div>
+            <div class="categories">
+                {%block content1%}
+
+                {% endblock%}
+            </div>
+           
+            
+         </div>
+         <div class="cards">
+            {%block content3%}
+            {% endblock%}
+        </div>
+    </body>
+</html>
